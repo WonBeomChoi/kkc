@@ -6,205 +6,165 @@
     android:layout_height="wrap_content"
     tools:layout_editor_absoluteY="81dp">
 
-    <TextView
-        android:id="@+id/WriteDownIfShared"
-        android:layout_width="0dp"
-        android:layout_height="0dp"
-        android:layout_marginTop="16dp"
-        android:layout_marginBottom="6dp"
-        app:layout_constraintBottom_toTopOf="@+id/Title"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-
-    <EditText
-        android:id="@+id/Title"
-        android:layout_width="0dp"
-        android:layout_height="0dp"
-        android:layout_marginStart="1dp"
-        android:layout_marginEnd="1dp"
-        android:ems="10"
-        android:inputType="text|textPersonName"
-        android:text="<제목>"
-        android:textSize="30dp"
-        app:layout_constraintBottom_toTopOf="@+id/CategoryTitle"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/WriteDownIfShared" />
-
-    <TextView
-        android:id="@+id/CategoryTitle"
-        android:layout_width="139dp"
-        android:layout_height="0dp"
-        android:layout_marginStart="1dp"
-        android:text="카테고리"
-        android:textSize="20dp"
-        app:layout_constraintBottom_toTopOf="@+id/Mukbang"
-        app:layout_constraintStart_toStartOf="@+id/Title"
-        app:layout_constraintTop_toBottomOf="@+id/Title" />
-
-    <CheckBox
-        android:id="@+id/Healing"
+    <android.support.constraint.ConstraintLayout
+        android:id="@+id/constraintLayout2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="힐링"
-        android:textSize="10dp"
-        app:layout_constraintEnd_toEndOf="@+id/etc"
-        app:layout_constraintStart_toEndOf="@+id/etc"
-        app:layout_constraintTop_toBottomOf="@+id/CategoryTitle" />
-
-    <CheckBox
-        android:id="@+id/Nature"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="자연"
-        android:textSize="10dp"
-        app:layout_constraintBaseline_toBaselineOf="@+id/SightSeeing"
-        app:layout_constraintEnd_toStartOf="@+id/SightSeeing"
-        app:layout_constraintStart_toEndOf="@+id/Add" />
-
-    <CheckBox
-        android:id="@+id/SightSeeing"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="관광"
-        android:textSize="10dp"
-        app:layout_constraintEnd_toStartOf="@+id/Cafe"
-        app:layout_constraintStart_toEndOf="@+id/Nature"
-        app:layout_constraintTop_toBottomOf="@+id/CategoryTitle" />
-
-    <CheckBox
-        android:id="@+id/Cafe"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="카페"
-        android:textSize="10dp"
-        app:layout_constraintBottom_toTopOf="@+id/Orm"
-        app:layout_constraintEnd_toStartOf="@+id/Orm"
-        app:layout_constraintStart_toEndOf="@+id/SightSeeing"
-        app:layout_constraintTop_toBottomOf="@+id/Ocean" />
-
-    <CheckBox
-        android:id="@+id/Orm"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="오름"
-        android:textSize="10dp"
-        app:layout_constraintBottom_toTopOf="@+id/etc"
-        app:layout_constraintEnd_toStartOf="@+id/Ocean"
-        app:layout_constraintStart_toEndOf="@+id/Cafe"
-        app:layout_constraintTop_toBottomOf="@+id/Cafe" />
-
-    <CheckBox
-        android:id="@+id/Ocean"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="바다"
-        android:textSize="10dp"
-        app:layout_constraintBottom_toTopOf="@+id/Cafe"
-        app:layout_constraintEnd_toStartOf="@+id/Mukbang"
-        app:layout_constraintStart_toEndOf="@+id/Orm"
-        app:layout_constraintTop_toBottomOf="@+id/Mukbang" />
-
-    <CheckBox
-        android:id="@+id/Mukbang"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="먹방"
-        android:textSize="10dp"
-        app:layout_constraintBottom_toTopOf="@+id/Ocean"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/Ocean"
-        app:layout_constraintTop_toBottomOf="@+id/CategoryTitle" />
-
-    <TextView
-        android:id="@+id/etc"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="16dp"
-        android:text="기타"
-        app:layout_constraintBottom_toTopOf="@+id/Minus"
-        app:layout_constraintEnd_toStartOf="@+id/Add"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/Orm" />
-
-    <Button
-        android:id="@+id/Add"
-        android:layout_width="0dp"
-        android:layout_height="34dp"
-        android:layout_marginStart="42dp"
-        android:layout_marginTop="24dp"
-        android:layout_marginEnd="295dp"
-        android:layout_marginBottom="27dp"
-        android:text="+"
-        app:layout_constraintBottom_toBottomOf="@+id/Period"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintEnd_toStartOf="@+id/Nature"
-        app:layout_constraintStart_toEndOf="@+id/etc"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/Nature" />
-
-    <TextView
-        android:id="@+id/Period"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="6dp"
-        android:layout_marginBottom="17dp"
-        android:text="기간"
-        android:textSize="20dp"
-        app:layout_constraintBottom_toTopOf="@+id/con"
-        app:layout_constraintEnd_toStartOf="@+id/Minus"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/Minus" />
-
-    <Button
-        android:id="@+id/Minus"
-        android:layout_width="0dp"
-        android:layout_height="0dp"
-        android:text="-"
-        app:layout_constraintBottom_toTopOf="@+id/Period"
-        app:layout_constraintEnd_toStartOf="@+id/DayNumber"
-        app:layout_constraintStart_toEndOf="@+id/Period"
-        app:layout_constraintTop_toBottomOf="@+id/etc" />
-
-    <Button
-        android:id="@+id/Plus"
-        android:layout_width="0dp"
-        android:layout_height="0dp"
-        android:layout_marginEnd="229dp"
-        android:text="+"
-        app:layout_constraintBottom_toBottomOf="@+id/Minus"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/DayNumber"
-        app:layout_constraintTop_toTopOf="@+id/DayNumber" />
-
-    <EditText
-        android:id="@+id/DayNumber"
-        android:layout_width="0dp"
-        android:layout_height="0dp"
-        android:layout_marginBottom="8dp"
-        android:ems="10"
-        android:inputType="textPersonName"
-        android:singleLine="true"
-        android:text="1"
-        android:textAlignment="center"
-        android:textSize="15dp"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toStartOf="@+id/Plus"
-        app:layout_constraintStart_toEndOf="@+id/Minus"
-        app:layout_constraintTop_toTopOf="@+id/Minus" />
+        app:layout_constraintEnd_toEndOf="parent">
 
-    <LinearLayout
-        android:id="@+id/con"
-        android:layout_width="0dp"
-        android:layout_height="0dp"
-        android:layout_marginStart="8dp"
-        android:layout_marginEnd="8dp"
-        android:orientation="vertical"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/Period"></LinearLayout>
+        <TextView
+            android:id="@+id/WriteDownIfShared"
+            android:layout_width="369dp"
+            android:layout_height="20dp"
+            tools:layout_editor_absoluteY="16dp" />
+
+        <EditText
+            android:id="@+id/Title"
+            android:layout_width="367dp"
+            android:layout_height="54dp"
+            android:ems="10"
+            android:inputType="text|textPersonName"
+            android:text="<제목>"
+            android:textSize="30dp"
+            tools:layout_editor_absoluteX="1dp"
+            tools:layout_editor_absoluteY="42dp" />
+
+        <TextView
+            android:id="@+id/CategoryTitle"
+            android:layout_width="139dp"
+            android:layout_height="31dp"
+            android:text="카테고리"
+            android:textSize="20dp"
+            tools:layout_editor_absoluteX="2dp"
+            tools:layout_editor_absoluteY="96dp" />
+
+        <CheckBox
+            android:id="@+id/Healing"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="힐링"
+            android:textSize="10dp"
+            tools:layout_editor_absoluteX="16dp"
+            tools:layout_editor_absoluteY="127dp" />
+
+        <CheckBox
+            android:id="@+id/Nature"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="자연"
+            android:textSize="10dp"
+            tools:layout_editor_absoluteX="69dp"
+            tools:layout_editor_absoluteY="127dp" />
+
+        <CheckBox
+            android:id="@+id/SightSeeing"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="관광"
+            android:textSize="10dp"
+            tools:layout_editor_absoluteX="119dp"
+            tools:layout_editor_absoluteY="127dp" />
+
+        <CheckBox
+            android:id="@+id/Cafe"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="카페"
+            android:textSize="10dp"
+            tools:layout_editor_absoluteX="169dp"
+            tools:layout_editor_absoluteY="127dp" />
+
+        <CheckBox
+            android:id="@+id/Orm"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="오름"
+            android:textSize="10dp"
+            tools:layout_editor_absoluteX="219dp"
+            tools:layout_editor_absoluteY="127dp" />
+
+        <CheckBox
+            android:id="@+id/Ocean"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="바다"
+            android:textSize="10dp"
+            tools:layout_editor_absoluteX="269dp"
+            tools:layout_editor_absoluteY="127dp" />
+
+        <CheckBox
+            android:id="@+id/Mukbang"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="먹방"
+            android:textSize="10dp"
+            tools:layout_editor_absoluteX="319dp"
+            tools:layout_editor_absoluteY="127dp" />
+
+        <TextView
+            android:id="@+id/etc"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="기타"
+            tools:layout_editor_absoluteX="16dp"
+            tools:layout_editor_absoluteY="159dp" />
+
+        <Button
+            android:id="@+id/Add"
+            android:layout_width="32dp"
+            android:layout_height="34dp"
+            android:text="+"
+            tools:layout_editor_absoluteX="42dp"
+            tools:layout_editor_absoluteY="151dp" />
+
+        <TextView
+            android:id="@+id/Period"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="기간"
+            android:textSize="20dp"
+            tools:layout_editor_absoluteX="6dp"
+            tools:layout_editor_absoluteY="185dp" />
+
+        <Button
+            android:id="@+id/Minus"
+            android:layout_width="33dp"
+            android:layout_height="38dp"
+            android:text="-"
+            tools:layout_editor_absoluteX="43dp"
+            tools:layout_editor_absoluteY="178dp" />
+
+        <Button
+            android:id="@+id/Plus"
+            android:layout_width="33dp"
+            android:layout_height="38dp"
+            android:text="+"
+            tools:layout_editor_absoluteX="107dp"
+            tools:layout_editor_absoluteY="178dp" />
+
+        <EditText
+            android:id="@+id/DayNumber"
+            android:layout_width="31dp"
+            android:layout_height="43dp"
+            android:ems="10"
+            android:inputType="textPersonName"
+            android:singleLine="true"
+            android:text="1"
+            android:textAlignment="center"
+            android:textSize="15dp"
+            tools:layout_editor_absoluteX="76dp"
+            tools:layout_editor_absoluteY="178dp" />
+
+        <LinearLayout
+            android:id="@+id/con"
+            android:layout_width="353dp"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            tools:layout_editor_absoluteX="8dp"
+            tools:layout_editor_absoluteY="229dp"></LinearLayout>
+
+    </android.support.constraint.ConstraintLayout>
 
 
 </android.support.constraint.ConstraintLayout>
