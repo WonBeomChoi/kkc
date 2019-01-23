@@ -159,51 +159,13 @@
         tools:layout_editor_absoluteX="76dp"
         tools:layout_editor_absoluteY="178dp" />
 
-    <android.support.constraint.ConstraintLayout
-        android:layout_width="355dp"
-        android:layout_height="128dp"
-        tools:layout_editor_absoluteX="7dp"
-        tools:layout_editor_absoluteY="232dp">
+    <LinearLayout
+        android:id="@+id/con"
+        android:layout_width="353dp"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        tools:layout_editor_absoluteX="8dp"
+        tools:layout_editor_absoluteY="229dp"></LinearLayout>
 
-        <TextView
-            android:id="@+id/textView5"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="1일차"
-            android:textSize="15dp"
-            tools:layout_editor_absoluteX="3dp"
-            tools:layout_editor_absoluteY="0dp" />
-
-        <ImageView
-            android:id="@+id/imageView"
-            android:layout_width="100dp"
-            android:layout_height="100dp"
-            android:scaleType="fitStart"
-            tools:layout_editor_absoluteX="16dp"
-            tools:layout_editor_absoluteY="26dp" />
-
-        <EditText
-            android:id="@+id/destination_title"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:ems="10"
-            android:inputType="textPersonName"
-            android:text="<Destination>"
-            tools:layout_editor_absoluteX="124dp"
-            tools:layout_editor_absoluteY="26dp" />
-
-        <EditText
-            android:id="@+id/editText4"
-            android:layout_width="214dp"
-            android:layout_height="32dp"
-            android:ems="10"
-            android:inputType="textPersonName"
-            android:text="<memo>"
-            android:textAlignment="textStart"
-            android:textSize="10dp"
-            tools:layout_editor_absoluteX="124dp"
-            tools:layout_editor_absoluteY="72dp" />
-
-    </android.support.constraint.ConstraintLayout>
 
 </android.support.constraint.ConstraintLayout>
