@@ -21,7 +21,7 @@ public class Home extends AppCompatActivity {
 
         RecyclerView recyclerView = findViewById(R.id.list_view);
         recyclerView.setLayoutManager(new LinearLayoutManager(this));
-        recyclerView.setAdapter(1);
+//        recyclerView.setAdapter(1);
 
     }
 }

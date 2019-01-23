@@ -43,9 +43,9 @@ public class MyRecyclerAdaprter extends RecyclerView.Adapter<MyRecyclerAdaprter.
 
         public MyViewHolder(@NonNull View itemView) {
             super(itemView);
-
-            textView = itemView.findViewById();
-            imageView = itemView.findViewById();
+//
+//            textView = itemView.findViewById();
+//            imageView = itemView.findViewById();
         }
     }
 }
