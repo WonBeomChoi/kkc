@@ -14,14 +14,20 @@ import java.util.List;
 
 public class Home extends AppCompatActivity {
 
+    ArrayList<String> data;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_home);
 
+        data = new ArrayList<>();
+        data.add("제목1");
+        data.add("제목2");
+        data.add("제목3");
+
         RecyclerView recyclerView = findViewById(R.id.list_view);
         recyclerView.setLayoutManager(new LinearLayoutManager(this));
-//        recyclerView.setAdapter(1);
+        recyclerView.setAdapter(new MyRecyclerAdaprter(data));
 
     }
 }

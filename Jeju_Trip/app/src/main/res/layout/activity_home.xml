@@ -13,7 +13,7 @@
         android:layout_height="50dp"
         android:layout_marginStart="8dp"
         android:layout_marginTop="8dp"
-        android:layout_toLeftOf="@+id/editText"
+        android:layout_toStartOf="@+id/editText"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
@@ -28,12 +28,12 @@
         android:inputType="textPersonName"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toEndOf="@+id/spinner2"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"
+        android:autofillHints="" />
 
     <com.synnapps.carouselview.CarouselView
         android:layout_width="match_parent"
-        android:layout_height="250dp"
+        android:layout_height="150dp"
         android:layout_alignParentStart="true"
         android:layout_alignParentBottom="true"
         android:layout_marginStart="0dp"
@@ -61,7 +61,6 @@
             android:id="@+id/check_heal"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_below="@+id/spinner2"
             android:text="@string/check_heal"
             />
 
@@ -71,7 +70,6 @@
             android:id="@+id/check_nature"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_below="@+id/spinner2"
             android:text="@string/check_nature" />
         <CheckBox
             android:scaleX="0.8"
@@ -79,7 +77,6 @@
             android:id="@+id/check_tour"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_below="@+id/spinner2"
             android:text="@string/check_tour"
             />
 
@@ -87,7 +84,6 @@
             android:id="@+id/check_cafe"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_below="@+id/spinner2"
             android:scaleX="0.8"
             android:scaleY="0.8"
             android:text="@string/check_cafe" />
@@ -97,18 +93,16 @@
             android:id="@+id/check_rise"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_below="@+id/spinner2"
             android:text="@string/check_rise"
             />
+
         <CheckBox
-            android:scaleX="0.8"
-            android:scaleY="0.8"
             android:id="@+id/check_sea"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_below="@+id/spinner2"
-            android:text="@string/check_sea"
-            />
+            android:scaleX="0.8"
+            android:scaleY="0.8"
+            android:text="@string/check_sea" />
 
     </LinearLayout>
 
