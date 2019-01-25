@@ -3,32 +3,26 @@ package com.example.user.jeju_trip;
 import org.json.simple.JSONArray;
 import org.json.simple.JSONObject;
 import org.json.simple.parser.JSONParser;
-import org.junit.Test;
 
 import java.io.BufferedInputStream;
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStream;
 import java.io.InputStreamReader;
-import java.net.MalformedURLException;
-import java.net.URL;
 import java.net.HttpURLConnection;
+import java.net.URL;
+import java.util.ArrayList;
 
-import static org.junit.Assert.*;
+public class Get_plan_list {
+    Get_plan_list(){}
 
-/**
- * Example local unit test, which will execute on the development machine (host).
- *
- * @see <a href="http://d.android.com/tools/testing">Testing documentation</a>
- */
-public class ExampleUnitTest {
-    @Test
-    public void adsf() throws IOException {
+    public JSONArray call_popular() throws IOException {
+        JSONArray jsonPop = null;
         URL url = new URL("http://myks790.iptime.org:8888/api/plan/list?classification=popularity&size=25&sort=id%2Cdesc");
         HttpURLConnection conn = (HttpURLConnection) url.openConnection();
         try {
             InputStream inputStream = new BufferedInputStream(conn.getInputStream());
-            BufferedReader bufferedReader = new BufferedReader(new InputStreamReader(conn.getInputStream()));
+            BufferedReader bufferedReader = new BufferedReader(new InputStreamReader(inputStream));
             String line;
             StringBuffer stringBuffer = new StringBuffer();
 
@@ -42,17 +36,24 @@ public class ExampleUnitTest {
             JSONParser jsonParser = new JSONParser();
             JSONObject jsonObject = (JSONObject) jsonParser.parse(string);
             JSONArray jsonCON = (JSONArray) jsonObject.get("content");
-            for(Object jsonItem : jsonCON){
-                System.out.println(((JSONObject) jsonItem).get("title").toString());
-            }
-            JSONObject jsonname = (JSONObject) jsonCON.get(1);
-            System.out.println(jsonname.get("title"));
-
+            jsonPop = jsonCON;
 
 
         } catch (Exception e) {
             e.printStackTrace();
         }
-
+        return jsonPop;
     }
+    public ArrayList<String> get_title() throws IOException {
+        ArrayList<String> title_list = new ArrayList<>();
+        Get_plan_list get_plan_list = new Get_plan_list();
+
+        JSONArray jsonArray = get_plan_list.call_popular();
+        for(Object item : jsonArray)
+        {
+            title_list.add(((JSONObject) item).get("title").toString());
+        }
+        return title_list;
+    }
+
 }

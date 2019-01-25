@@ -1,5 +1,6 @@
 package com.example.user.jeju_trip;
 
+import android.os.AsyncTask;
 import android.support.constraint.ConstraintLayout;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
@@ -24,7 +25,6 @@ public class Home extends AppCompatActivity {
         data.add("제목1");
         data.add("제목2");
         data.add("제목3");
-
         RecyclerView recyclerView = findViewById(R.id.list_view);
         recyclerView.setLayoutManager(new LinearLayoutManager(this));
         recyclerView.setAdapter(new MyRecyclerAdaprter(data));
