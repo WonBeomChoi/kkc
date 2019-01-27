@@ -4,8 +4,12 @@ import android.content.Context;
 import android.view.LayoutInflater;
 import android.widget.LinearLayout;
 import android.util.AttributeSet;
+import android.widget.TextView;
 
 public class Sub_WriteSchedule extends LinearLayout{
+
+    TextView dayText;
+
     public Sub_WriteSchedule(Context context, AttributeSet attrs) {
         super(context, attrs);
 
@@ -17,6 +21,13 @@ public class Sub_WriteSchedule extends LinearLayout{
 
         init(context);
     }
+
+    public void changeTextView(int dayValue){
+        dayText=(TextView)findViewById(R.id.DayText);
+        dayText.setText(String.valueOf(dayValue)+"일자");
+        return;
+    }
+
     private void init(Context context){
         LayoutInflater inflater =(LayoutInflater)context.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
         inflater.inflate(R.layout.sub_write_schedule,this,true);
