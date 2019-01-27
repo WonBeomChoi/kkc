@@ -3,7 +3,6 @@ package com.example.user.jeju_trip;
 import android.content.Context;
 import android.view.LayoutInflater;
 import android.widget.LinearLayout;
-import java.util.jar.Attributes;
 import android.util.AttributeSet;
 
 public class Sub_WriteSchedule extends LinearLayout{
@@ -20,6 +19,6 @@ public class Sub_WriteSchedule extends LinearLayout{
     }
     private void init(Context context){
         LayoutInflater inflater =(LayoutInflater)context.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
-        inflater.inflate(R.layout.sub_wirte_schedule,this,true);
+        inflater.inflate(R.layout.sub_write_schedule,this,true);
     }
 }
