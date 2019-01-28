@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item android:id="@+id/Home"
+        android:title="Home"/>
+
+    <item android:id="@+id/Write"
+        android:title="일정 작성" />
+
+    <item android:id="@+id/List"
+        android:title="내 일정 목록" />
+
+    <item android:id="@+id/Logout"
+        android:title="로그아웃" />
+<menu>
+
+</menu>
+
+</menu>
