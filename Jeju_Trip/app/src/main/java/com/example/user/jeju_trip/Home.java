@@ -11,12 +11,16 @@ import android.widget.ArrayAdapter;
 import android.support.v4.widget.DrawerLayout;
 import android.widget.ListView;
 import android.widget.AdapterView;
+<<<<<<< HEAD
 import android.content.Intent;
 import java.util.ArrayList;
 import android.view.Menu;
 import android.view.MenuInflater;
 import android.view.MenuItem;
 import android.widget.Toast;
+=======
+import java.util.ArrayList;
+>>>>>>> 886aa7022e23e13520aaa70145064034f10423f5
 
 public class Home extends AppCompatActivity {
 
