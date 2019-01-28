@@ -10,11 +10,11 @@
     <string name="title_activity_drawer">DrawerActivity</string>
     <string name="navigation_drawer_open">Open navigation drawer</string>
     <string name="navigation_drawer_close">Close navigation drawer</string>
-<<<<<<< HEAD
-    <string name="nav_header_title">Android Studio</string>
-=======
+
+
+
     <string name="nav_header_title">초원범</string>
->>>>>>> a98f92b1043ff4be196770a8a8c7c7cd1087e155
+
     <string name="nav_header_subtitle">android.studio@android.com</string>
     <string name="nav_header_desc">Navigation header</string>
     <string name="action_settings">Settings</string>
