@@ -11,10 +11,52 @@ import android.widget.ArrayAdapter;
 import android.support.v4.widget.DrawerLayout;
 import android.widget.ListView;
 import android.widget.AdapterView;
+import android.content.Intent;
+import java.util.ArrayList;
+import android.view.Menu;
+import android.view.MenuInflater;
+import android.view.MenuItem;
+import android.widget.Toast;
 
 public class Home extends AppCompatActivity {
 
     ArrayList<String> data;
+
+    @Override
+    public boolean onCreateOptionsMenu(Menu menu) {
+        MenuInflater inflater = getMenuInflater();
+        inflater.inflate(R.menu.menu, menu);
+        return true;
+    }
+
+    @Override
+    public boolean onOptionsItemSelected(MenuItem item) {
+        int id = item.getItemId();
+        switch (item.getItemId()) {
+            case R.id.Home:
+                Toast.makeText(this, "Home 화면입니다.", Toast.LENGTH_SHORT).show();
+                Intent Home = new Intent(this, Home.class);
+                startActivity(Home);
+                return true;
+            case R.id.Write:
+                Toast.makeText(this, "일정 작성 화면입니다.", Toast.LENGTH_SHORT).show();
+                Intent WriteSchedule = new Intent(this, WriteSchedule.class);
+                startActivity(WriteSchedule);
+                return true;
+            case R.id.List:
+                Toast.makeText(this, "내 일정 목록 화면입니다.", Toast.LENGTH_SHORT).show();
+                Intent PlanList = new Intent(this, PlanList.class);
+                startActivity(PlanList);
+                return true;
+            case R.id.Logout:
+                Toast.makeText(this, "로그아웃되었습니다.", Toast.LENGTH_SHORT).show();
+                Intent Logout = new Intent(this, Logout.class);
+                startActivity(Logout);
+                return true;
+            default:
+                return super.onOptionsItemSelected(item);
+        }
+    }
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -28,35 +70,6 @@ public class Home extends AppCompatActivity {
         recyclerView.setLayoutManager(new LinearLayoutManager(this));
         recyclerView.setAdapter(new MyRecyclerAdaprter(data));
 
-//        final String[] items = {"HOME", "일정 작성하기", "내 일정목록 보기", "LOG OUT"} ;
-//        ArrayAdapter adapter = new ArrayAdapter(this, android.R.layout.simple_list_item_1, items) ;
-//
-//        ListView listview = (ListView) findViewById(R.id.drawer_menulist) ;
-//        listview.setAdapter(adapter) ;
-//
-//        listview.setOnItemClickListener(new ListView.OnItemClickListener() {
-//            @Override
-//            public void onItemClick(AdapterView parent, View v, int position, long id) {
-//                switch (position) {
-//                    case 0 :
-//
-//                        break ;
-//                    case 1 :
-//
-//                        break ;
-//                    case 2 :
-//
-//                        break ;
-//                    case 3 :
-//
-//                        break ;
-//                    default:
-//                        break;
-//                }
-//
-//                // 코드 계속 ...
-//            }
-//        });
 
     }
 }
